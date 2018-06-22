@@ -68,6 +68,7 @@ namespace pooling
 
         public void Release(T obj)
         {
+			obj.transform.SetParent(mParent);
 			if(obj != null)
                 obj.OnRelease();
         }
